@@ -1,3 +1,4 @@
-module.exports = function($scope) {
-    $scope.message = 'start controller :)'
-};
+var app = angular.module('app');
+app.controller('StartController', ['$scope', function($scope){
+
+}]);
