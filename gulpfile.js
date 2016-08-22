@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var less = require('gulp-less');
+var concat = require('gulp-concat');
 
 gulp.task('connect', function () {
     connect.server({
@@ -20,6 +22,9 @@ gulp.task('watch', function () {
     gulp.watch(['app/index.html', 'app/views/**/*.html'], [
         'views'
     ]);
+    gulp.watch(['app/styles/**/*.less'], [
+        'styles'
+    ]);
 });
 
 gulp.task('views', function () {
@@ -29,4 +34,11 @@ gulp.task('views', function () {
         .pipe(gulp.dest('dist/views/'));
 });
 
-gulp.task('default', ['browserify', 'views', 'connect', 'watch']);
+gulp.task('styles', function(){
+    gulp.src('./app/styles/**/*.less')
+        .pipe(less())
+        .pipe(concat('common.css'))
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('default', ['browserify', 'views','styles', 'connect', 'watch']);

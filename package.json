@@ -4,7 +4,8 @@
   "description": "test task",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,10 @@
     "browserify":"^13.1.0",
     "vinyl-source-stream":"^1.1.0",
     "angular":"^1.5.8",
-    "angular-route": "~1.5.0"
+    "angular-route": "~1.5.0",
+    "gulp-less":"^3.1.0",
+    "gulp-concat":"^2.6.0",
+    "bootstrap":"^3.3.7",
+    "jquery":"^3.1.0"
   }
 }
