@@ -1,24 +1,27 @@
-<div ng-controller="AlbumsController">
+<div>
     <div ng-repeat="album in albums">
-        <div class="square">
-            <div class="content">
-                <div class="table">
-                    <div class="background media" ng-repeat="picture in album.pictures | limitTo:4">
+        <a ng-href="/#gallery/album/{{album.id}}">
+            <div class="square">
+                <div class="content">
+                    <div class="table">
+                        <div class="background media" ng-repeat="picture in album.pictures | limitTo:4">
                             <img class="img-responsive" ng-src="{{picture.url}}" >
 
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="table">
+                        <div class="table-cell">
+                            {{album.name}}
+                            <br>
+                            <b>#{{album.pictures.length}}</b>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="content">
-                <div class="table">
-                    <div class="table-cell">
-                        {{album.name}}
-                        <br>
-                        <b>#{{album.pictures.length}}</b>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        </a>
 
     </div>
 </div>

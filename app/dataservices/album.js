@@ -12,6 +12,7 @@ app.factory('AlbumDataservice', ['$http', 'Album', 'PictureDataservice', functio
     //it would load the data when called for the first time
     //then just return the stored objects
     //but it's a test task, so I will just save the data to an array :)
+    //and ignore the case if get() is called when getAll() has never been called
     var albums = [];
     return {
         getAll: function () {
@@ -26,10 +27,14 @@ app.factory('AlbumDataservice', ['$http', 'Album', 'PictureDataservice', functio
                         var album =_.find(result, {id:picture.albumId});
                         album.pictures.push(picture);
                     });
+                    albums = result;
                     return result;
                 });
 
             })
+        },
+        get: function(id){
+           return _.find(albums,{id: id});
         }
 
     }
