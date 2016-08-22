@@ -1,2 +1,8 @@
 <a class="btn btn-primary" role="button" href="/#gallery/">Albums</a>
-<div>{{album.name}}</div>
+<div>Album: {{album.name}}</div>
+<div ng-repeat="picture in album.pictures">
+    <div class="col-md-3">
+        <img ng-src="{{picture.url}}" class="img-responsive">
+    </div>
+
+</div>

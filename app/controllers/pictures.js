@@ -9,5 +9,9 @@ app.controller('PicturesController', ['$scope','AlbumDataservice','$routeParams'
 
         //lalala, let's suppose it's a promise
         $scope.album = AlbumDataservice.get($scope.albumId);
-
+        if(!$scope.album){
+            AlbumDataservice.getAll().then(function (data) {
+                $scope.album = AlbumDataservice.get($scope.albumId);
+            });
+        }
     }]);
