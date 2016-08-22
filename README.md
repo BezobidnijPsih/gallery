@@ -23,3 +23,4 @@ in the destivation folder
 ## Screenshots
 ![alt text](https://github.com/BezobidnijPsih/gallery/blob/master/screenshots/1.jpg "Scr1")
 ![alt text](https://github.com/BezobidnijPsih/gallery/blob/master/screenshots/2.jpg "Scr2")
+![alt text](https://github.com/BezobidnijPsih/gallery/blob/master/screenshots/3.jpg "Scr3")
