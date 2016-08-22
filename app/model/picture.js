@@ -1,3 +1,4 @@
+var app = angular.module('app');
 app.factory('Picture', [ function() {
     function Picture(pictureData) {
         if (pictureData) {

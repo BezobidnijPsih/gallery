@@ -2,13 +2,15 @@ var _ = require("underscore");
 require("../model/album");
 
 var app = angular.module('app');
-app.factory('AlbumDataservice',['$http','Album',function($http, Album){
+var urls = {
+    albums: 'http://jsonplaceholder.typicode.com/albums/'
+};
+app.factory('AlbumDataservice', ['$http', 'Album', function ($http, Album) {
     return {
-        getAll: function() {
-            $http.get('http://jsonplaceholder.typicode.com/albums/').then(function(data){
-                debugger;
+        getAll: function () {
+            return $http.get(urls.albums).then(function (data) {
                 var result = [];
-                _.each(data, function(albumData){
+                _.each(data.data, function (albumData) {
                     var album = new Album(albumData);
                     result.push(album)
                 });
@@ -17,4 +19,3 @@ app.factory('AlbumDataservice',['$http','Album',function($http, Album){
         }
     }
 }]);
-console.log("dataservice");

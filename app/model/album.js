@@ -10,8 +10,8 @@ app.factory('Album', [function() {
             this.name = albumData.title;
             this.id = albumData.id;
             this.userId = albumData.userId;
+            this.pictures = [];
         }
     };
     return Album;
 }]);
-console.log("model");
