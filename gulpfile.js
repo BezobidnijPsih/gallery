@@ -34,11 +34,17 @@ gulp.task('views', function () {
         .pipe(gulp.dest('dist/views/'));
 });
 
-gulp.task('styles', function(){
+gulp.task('styles', function () {
     gulp.src('./app/styles/**/*.less')
         .pipe(less())
         .pipe(concat('common.css'))
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('default', ['browserify', 'views','styles', 'connect', 'watch']);
+gulp.task('copy:resources', function () {
+    var glyphiconsGlob = './node_modules/bootstrap/fonts/*.*';
+
+    return gulp.src(glyphiconsGlob).pipe(gulp.dest('dist/fonts/'));
+});
+
+gulp.task('default', ['browserify', 'views', 'copy:resources', 'styles', 'connect', 'watch']);
