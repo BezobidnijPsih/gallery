@@ -1,0 +1,30 @@
+{
+  "name": "gallery",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BezobidnijPsih/gallery.git"
+  },
+  "keywords": [
+    "gallery"
+  ],
+  "author": "Mulenko Tetiana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BezobidnijPsih/gallery/issues"
+  },
+  "homepage": "https://github.com/BezobidnijPsih/gallery#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect":"^5.0.0",
+    "browserify":"^13.1.0",
+    "vinyl-source-stream":"^1.1.0",
+    "angular":"^1.5.8",
+    "angular-route": "~1.5.0"
+  }
+}
