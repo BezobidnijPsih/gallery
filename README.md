@@ -18,7 +18,7 @@ npm run build
 ```
 in the destivation folder
 
-3.Enjoy it at http://localhost:4000/#gallery/
+3.Enjoy at http://localhost:4000/#gallery/
 
 ## Screenshots
 ![alt text](https://github.com/BezobidnijPsih/gallery/blob/master/screenshots/1.jpg "Scr1")
