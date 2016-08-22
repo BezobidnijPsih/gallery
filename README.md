@@ -18,4 +18,4 @@ npm run build
 ```
 in the destivation folder
 
-3. Enjoy
+3. Enjoy it at http://localhost:4000/#gallery/
